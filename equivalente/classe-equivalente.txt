@@ -1,0 +1,72 @@
+Classe de equivalencia
+
+Triangulo:
+    Entrada:
+        A, B, C
+    Classes Válidas:
+        A < (B + C) &&
+        B < (C + A) &&
+        C < (A + B)
+    Classes Inválidas:
+        A >= (B+C) && A > 0 ||
+        B >= (A+C) && B > 0 ||
+        C >= (B+A) && C > 0
+
+Triangulo Equilatero:
+    Entrada:
+        A, B, C
+    Classes Válidas:
+        A < (B + C) &&
+        B < (C + A) &&
+        C < (A + B) &&
+        A = B &&
+        B = C
+    Classes Inválidas:
+        A >= (B+C) && A > 0 ||
+        B >= (A+C) && B > 0 ||
+        C >= (B+A) && C > 0 ||
+        A != B ||
+        B != C
+
+Triangulo Isosceles:
+    Entrada:
+        A, B, C
+    Classes Válidas:
+        A < (B + C) &&
+        B < (C + A) &&
+        C < (A + B) &&
+        (
+            A = B && C != A ||
+            A = C && B != A ||
+            B = C && B != A
+        )
+
+    Classes Inválidas:
+        A >= (B+C) && A > 0 ||
+        B >= (A+C) && B > 0 ||
+        C >= (B+A) && C > 0 ||
+        (
+            A = B && B = C ||
+            A != B && A != C && B != C
+        )
+
+Triangulo Escaleno:
+    Entrada:
+        A, B, C
+    Classes Válidas:
+        A < (B + C) &&
+        B < (C + A) &&
+        C < (A + B) &&
+        A != B &&
+        A != C &&
+        B != C
+
+    Classes Inválidas:
+        A >= (B+C) && A > 0 ||
+        B >= (A+C) && B > 0 ||
+        C >= (B+A) && C > 0 ||
+        (
+            A = B ||
+            A = C ||
+            B = C
+        )
